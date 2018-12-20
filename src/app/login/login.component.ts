@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NavController, ToastController } from '@ionic/angular';
+import { NavController, ToastController, NavParams } from '@ionic/angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
