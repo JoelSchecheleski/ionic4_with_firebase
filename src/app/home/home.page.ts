@@ -21,7 +21,7 @@ export class HomePage {
   }
 
   edit(key) {
-    this.router.navigate(['/edit/'+key]);
+    this.router.navigate(['/edit/' + key]);
   }
 
   async delete(key) {
@@ -39,7 +39,7 @@ export class HomePage {
         }, {
           text: 'Confirmar',
           handler: () => {
-            firebase.database().ref('infos/'+key).remove();
+            firebase.database().ref('infos/' + key).remove();
           }
         }
       ]
@@ -51,13 +51,14 @@ export class HomePage {
 }
 
 export const snapshotToArray = snapshot => {
-  let returnArr = [];
+  const returnArr = [];
 
   snapshot.forEach(childSnapshot => {
-      let item = childSnapshot.val();
+      const item = childSnapshot.val();
       item.key = childSnapshot.key;
       returnArr.push(item);
   });
 
   return returnArr;
-}
+};
+
